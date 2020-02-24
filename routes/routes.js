@@ -10,6 +10,11 @@ router.get('/:location', async (req, res) => {
   res.json(weatherData);
 });
 
+router.get('/current/:lat/:lng', async (req, res) => {
+  const result = await getWeather({ lat: req.params.lat, lng: req.params.lng});
+  res.json(result);
+});
+
 const getWeather = async ({ lat, lng }) => {
   const result = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&APPID=${process.env.WEATHER_KEY}`)
   return await result.json();
