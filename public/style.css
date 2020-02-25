@@ -7,67 +7,72 @@
 body {
   min-height: 100vh;
   background: linear-gradient(160deg, #24639a, rgb(4, 20, 82)); 
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: white;
-  padding: 10px;
-  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-.search-box {
+.search-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.search-input {
-  padding: 7px;
-  width: 70%
-}
-
-.search-button {
-  margin-top: 15px;
-  padding: 10px 15px;
-}
-
-.btn {
-  text-align: center;
-  border-radius: 3px;
-  
-}
-
-.input {
-  background-color: rgb(205, 214, 224);
-  border: none;
-  border-radius: 3px;
-}
-
-.main-data {
-  display: flex;
-  width: 80%;
-  justify-content: space-around;
-  margin-bottom: 20px;
 }
 
 .weather-data {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+.main-data {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: white;
+  padding-bottom: 10px;
+}
+
+.degrees {
+  font-size: 32px;
+}
+
+.additional-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.additional-data .row:last-child {
+  border: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7px;
+  width: 90%;
+}
+
+.row-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.row-title p:first-child, .row-data p:first-child {
+  color: rgb(166, 160, 160);
+  font-weight: 400;
+}
+
+.row-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fade-in {
-  animation: fade-in 1s ease-in-out;
+  animation: fade-in 0.5s ease-in-out;
 }
 
 @keyframes fade-in {
@@ -78,4 +83,18 @@ header {
   100% {
     opacity: 100%;
   }
+}
+
+/* Utility classes */
+
+.light-font-weight {
+  font-weight: 300;
+}
+
+.text-color {
+  color: #fff;
+}
+
+.full-width-border-bottom {
+  border-bottom: 1px solid #fff;
 }

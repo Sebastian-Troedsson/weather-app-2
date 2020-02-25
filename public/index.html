@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <title>Weather Forecast</title>
 </head>
 <body>
-  <header>
-    <h1 class="title">Weather Forecast</h1>
-  </header>
-  <section class="search-box">
-    <input type="text" class="search-input input" id="search-input">
-    <button class="search-button btn" id="search-button">Search</button>
-  </section>
-  <section id="weather-data">
-  </section>
+  <div class="container">
+    <header>
+      <h2 class="light-font-weight text-color">Weather Forecast</h2>
+    </header>
+    <section class="search-container">
+      <input class="form-control" id="search-input" type="text">
+      <button type="button" id="search-button" class="btn btn-primary">Search</button>
+    </section>
+    <section id="weather-data">
+    </section>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>

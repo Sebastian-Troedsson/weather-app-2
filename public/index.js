@@ -16,18 +16,67 @@ const searchButton = document.querySelector('#search-button');
 })();
 
 function appendData(data) {
+  console.log(data);
   weatherData.innerHTML = `
-    <div class="fade-in weather-data">
-      <div class="main-data">
-        <h2>${data.name}, ${data.sys.country}</h2>
-        <h2>${data.main.temp}&#176C</h2>
+    <div class="weather-data fade-in">
+      <div class="main-data full-width-border-bottom">
+        <h2 class="location light-font-weight text-color">${data.name}, ${data.sys.country}</h2>
+        <p class="degrees light-font-weight text-color">${data.main.temp}&#176</p>
       </div>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div> 
+      <div class="additional-data">
+        <div class="row full-width-border-bottom">
+          <div class="row-title text-color light-font-weight">
+            <p>Min temp</p>
+            <p>${data.main.temp_min}&#176</p>
+          </div>
+          <div class="row-data text-color light-font-weight">
+            <p>Max temp</p>
+            <p>${data.main.temp_max}&#176</p>
+          </div>
+        </div>
+        <div class="row full-width-border-bottom">
+          <div class="row-title text-color light-font-weight">
+            <p>Feels like</p>
+            <p>${data.main.feels_like}&#176</p>
+          </div>
+          <div class="row-data text-color light-font-weight">
+            <p>Wind</p>
+            <p>${data.wind.speed}m/s</p>
+          </div>
+        </div>
+        <div class="row full-width-border-bottom">
+          <div class="row-title text-color light-font-weight">
+            <p>Humidity</p>
+            <p>${data.main.humidity}%</p>
+          </div>
+          <div class="row-data text-color light-font-weight">
+            <p>Pressure</p>
+            <p>${data.main.pressure}hPa</p>
+          </div>
+        </div>
+        <div class="row full-width-border-bottom">
+          <div class="row-title text-color light-font-weight">
+            <p>TODO</p>
+            <p>TODO</p>
+          </div>
+          <div class="row-data text-color light-font-weight">
+            <p>TODO</p>
+            <p>TODO</p>
+          </div>
+        </div>
+        <div class="row full-width-border-bottom">
+          <div class="row-title text-color light-font-weight">
+            <p>TODO</p>
+            <p>TODO</p>
+          </div>
+          <div class="row-data text-color light-font-weight ">
+            <p>TODO</p>
+            <p>TODO</p>
+          </div>
+        </div>
+      </div> 
+      <div class="full-width-border-bottom"></div>
+  </div>
   `;
 }
 
