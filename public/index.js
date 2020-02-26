@@ -88,3 +88,5 @@ function getData() {
 }
 
 searchButton.addEventListener('click', getData);
+searchInput.addEventListener('keyup', (e) => e.keyCode === 13 ? getData() : 0);
+

@@ -6,7 +6,6 @@ require('dotenv').config();
 router.get('/:location', async (req, res) => {
   const result = await fetch(`https://eu1.locationiq.com/v1/search.php?key=${process.env.GEOCODER_KEY}&q=${req.params.location}&format=json`);
   const geoCoderData = await result.json();
-  console.log(geoCoderData)
   const weatherData = await getWeather({ lat: geoCoderData[0].lat, lng: geoCoderData[0].lon });
   res.json(weatherData);
 });
